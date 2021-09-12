@@ -4,21 +4,19 @@ const passport = require('passport');
 
 const { getHashedPassword, randomText } = require('../lib/function');
 const { checkUsername, addUser } = require('../database/db');
-
-router.get('/', notAuthenticated, (req, res) => {
+router.get('/', (req, res) => {
     res.render('login', {
         layout: 'layouts/main'
     });
 });
 
-router.get('/login', notAuthenticated, (req, res) => {
+router.get('/login', (req, res) => {
     res.render('login', {
-        recaptcha: res.recaptcha,
         layout: 'layouts/main'
     });
 });
 
-router.post('/login', recaptcha.middleware.verify, async(req, res, next) => {
+router.post('/login', async(req, res, next) => {
     passport.authenticate('local', {
         successRedirect: '/docs',
         failureRedirect: '/users/login',
@@ -26,14 +24,14 @@ router.post('/login', recaptcha.middleware.verify, async(req, res, next) => {
     })(req, res, next);
 });
 
-router.get('/register', notAuthenticated, (req, res) => {
+router.get('/register', (req, res) => {
     res.render('register', {
         recaptcha: res.recaptcha,
         layout: 'layouts/main'  
     });
 });
 
-router.post('/register', recaptcha.middleware.verify, async (req, res) => {
+router.post('/register', async (req, res) => {
     try {
         let {username, password, confirmPassword } = req.body;
         if (password.length < 6 || confirmPassword < 6) {
