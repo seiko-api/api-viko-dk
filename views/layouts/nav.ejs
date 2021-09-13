@@ -1,4 +1,5 @@
-
+<script src="https://studiovdk.herokuapp.com/main-menu/databs.js"></script>
+ <script src="https://studiovdk.herokuapp.com/main-menu/berita.js"></script>
 <style> .qon {
   float: left;
   width: 50%;
@@ -6,14 +7,16 @@
   margin: 1% 10%;
   height: 40px;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.5em;
 }
 </style>
+<script src="https://studiovdk.herokuapp.com/main-menu/databs.js"></script>
+<script src="https://studiovdk.herokuapp.com/main-menu/berita.js"></script>
+
 <header id="header" class="row"> 
   <div class="header-logo">
       <a href="/">VIKO-API</a>
   </div>
-  <marquee class="qon" id="pedofil" direction="left" onmouseover="stop()" onmouseout="start()"></marquee>
+  
   <nav id="header-nav-wrap">
       <ul class="header-main-nav">
           <li><a href="/">Home</a></li>
@@ -27,7 +30,18 @@
       </ul>
       <a href="/docs" class="button button-primary cta">Docs</a>
   </nav>
-  <a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
+  <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+  <marquee class="qon" id="pedofil" direction="left" onmouseover="stop()" onmouseout="start()"></marquee>
 </header>
-  <script src="https://studiovdk.herokuapp.com/main-menu/databs.js"></script>
-  <script src="https://studiovdk.herokuapp.com/main-menu/berita.js"></script>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          vikoapi();
+        })
+        document.addEventListener("DOMContentLoaded", function() {
+          markue();
+        })
+        document.addEventListener("DOMContentLoaded", function() {
+          prosedur();
+        })
+      </script>
