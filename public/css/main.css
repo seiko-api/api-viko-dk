@@ -339,7 +339,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #39b54a;
+  background: #ffffff;
   position: absolute;
   left: -17px;
   top: 11px;
@@ -348,7 +348,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #39b54a;
+  color: #00b6e3;
 }
 
 dd {
