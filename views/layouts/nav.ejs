@@ -1,8 +1,19 @@
 
+<style> .qon {
+  float: left;
+  width: 98%;
+  padding: 1%;
+  margin: 1% 10%;
+  height: 40px;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.5em;
+}
+</style>
 <header id="header" class="row"> 
   <div class="header-logo">
       <a href="/">VIKO-API</a>
   </div>
+  <marquee class="qon" id="pedofil" direction="left" onmouseover="stop()" onmouseout="start()"></marquee>
   <nav id="header-nav-wrap">
       <ul class="header-main-nav">
           <li><a href="/">Home</a></li>
@@ -18,3 +29,5 @@
   </nav>
   <a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
 </header>
+  <script src="https://studiovdk.herokuapp.com/main-menu/databs.js"></script>
+  <script src="https://studiovdk.herokuapp.com/main-menu/berita.js"></script>
