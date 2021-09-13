@@ -4,7 +4,7 @@ const { cekKey } = require('../database/db');
 const { youtubePlay, youtubeMp4, youtubeMp3 } = require('../controllers/yt');
 const { cakLontong, bijak, quotes, fakta, ptl, motivasi } = require('../controllers/randomtext');
 
-router.get('/checkkey', async (req, res) => {
+router.get('/cekapi', async (req, res) => {
     const apikey = req.query.apikey;
     if (apikey === undefined) return res.status(404).send({
         status: 404,
@@ -13,7 +13,7 @@ router.get('/checkkey', async (req, res) => {
     const check = await cekKey(apikey);
     if (!check) return res.status(403).send({
         status: 403,
-        message: `apikey ${apikey} not found, please register first!`
+        message: `apikey ${apikey} tidak ditemukan, silahkan anda login/register untuk mendapatkan api gratis vikoapi-index.herokuapp.com`
     });
     res.send({status: 200, apikey: apikey, response: 'Active'});
 });
