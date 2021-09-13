@@ -67,7 +67,7 @@ body {
 }
 
 body {
-  background: #141515;
+  background: #0093cc;
   font-family: "muli-regular", sans-serif;
   font-size: 1.6rem;
   line-height: 1.875;
@@ -83,14 +83,14 @@ body {
 
 a,
 a:visited {
-  color: #0087cc;
+  color: #0093cc;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 a:hover,
 a:focus {
-  color: #39b54a;
+  color: #FFFFFF;
 }
 
 
@@ -101,7 +101,7 @@ a:focus {
 
 h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
   font-family: "montserrat-regular", sans-serif;
-  color: #151515;
+  color: #0093cc;
   font-style: normal;
   text-rendering: optimizeLegibility;
   margin-bottom: 2.4rem;
