@@ -15,7 +15,7 @@ router.get('/cekapi', async (req, res) => {
         status: 403,
         message: `apikey ${apikey} tidak ditemukan, silahkan anda login/register untuk mendapatkan api gratis vikoapi-index.herokuapp.com`
     });
-    res.send({status: 200, apikey: apikey, response: 'Active'});
+    res.send({status: 200, apikey: apikey, limit: '900 limit', note: 'apikey aktif, silahkan gunakan restapinya'});
 });
 
 router.get('/ytplay', youtubePlay);
